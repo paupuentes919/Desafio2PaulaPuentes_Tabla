@@ -17,6 +17,19 @@
 th{
     width: 15rem;
 }
-.table-pp{
-    background-color: pink;
+.thead-dark{
+    background: pink;
+}
+.thead-light{
+    background: magenta;
+}
+.fila-par{
+    background: white;
+}
+.fila-impar{
+    background: grey;
+}
+.argentina{
+    background: grey;
+    color: blue;
 }

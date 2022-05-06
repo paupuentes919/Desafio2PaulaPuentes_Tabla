@@ -21,23 +21,18 @@
         </a></p>
     </div>
 
+    
     <div id="app">
-        
         <div class="contenedor-grupos">
-            <div class="grupo-tabla">
-                <h2 class="grupo">Grupo A</h2>
-                    <tabla :class="cssGrupoA" :titulos="tabla1.titulos" :registros="tabla1.registros"></tabla>
-            </div>
-            <div class="grupo-tabla">
-                <h2 class="grupo">Grupo B</h2>
-                <tabla :class="cssGrupoB" :titulos="tabla2.titulos" :registros="tabla2.registros" ></tabla>
-            </div>
-            <div class="grupo-tabla">
-                <h2 class="grupo">Grupo C</h2>
-                <tabla :class="cssGrupoC" :titulos="tabla3.titulos" :registros="tabla3.registros"></tabla>
+            <tabla-componente
+            v-for="(tabla, index) in tablas" :key="index"
+            :index="index" 
+            :titulos="titulos" 
+            :registros="tabla.registros"
+            />
+           
             </div>
         </div>
-
     </div>
 </head>
 <body>
